@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Title</title>
+  </head>
+  <style>
+    body {
+      background: #eee;
+    }
+    .main-box.no-header {
+      padding-top: 20px;
+    }
+
+    .main-box {
+      background: #ffffff;
+      -webkit-box-shadow: 1px 1px 2px 0 #cccccc;
+      -moz-box-shadow: 1px 1px 2px 0 #cccccc;
+      -o-box-shadow: 1px 1px 2px 0 #cccccc;
+      -ms-box-shadow: 1px 1px 2px 0 #cccccc;
+      box-shadow: 1px 1px 2px 0 #cccccc;
+      margin-bottom: 16px;
+      -webikt-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+    .table a.table-link.danger {
+      color: #e74c3c;
+    }
+    .label {
+      border-radius: 3px;
+      font-size: 0.875em;
+      font-weight: 600;
+      max-width: 100px !important;
+      padding: 5px 12px 5px 12px;
+      cursor: pointer;
+    }
+    .user-list tbody td .user-subhead {
+      font-size: 0.875em;
+      font-style: italic;
+    }
+    .user-list tbody td .user-link {
+      display: block;
+      font-size: 1.25em;
+      padding-top: 3px;
+      margin-left: 60px;
+    }
+    a {
+      color: #3498db;
+      outline: none !important;
+    }
+    .user-list tbody td > img {
+      position: relative;
+      max-width: 50px;
+      float: left;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .table thead tr th {
+      text-transform: uppercase;
+      font-size: 0.875em;
+    }
+    .table thead tr th {
+      border-bottom: 2px solid #e7ebee;
+    }
+    .table tbody tr td:first-child {
+      font-size: 1.125em;
+      font-weight: 300;
+    }
+    .table tbody tr td {
+      font-size: 0.875em;
+      vertical-align: middle;
+      border-top: 1px solid #e7ebee;
+      padding: 12px 8px;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+  </style>
+  <body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+    />
+    <hr />
+    <div class="container bootstrap snippets bootdey">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="main-box no-header clearfix">
+            <div class="main-box-body clearfix">
+              <div class="table-responsive">
+                <table class="table user-list">
+                  <thead>
+                    <tr>
+                      <th><span>User</span></th>
+                      <th><span>Created</span></th>
+                      <th class="text-center"><span>Status</span></th>
+                      <th><span>Email</span></th>
+                      <th>&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const tbody = document.querySelector("tbody");
+
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      const img = document.createElement("img");
+      img.src = "https://bootdey.com/img/Content/user_1.jpg";
+      const a = document.createElement("a");
+      a.href = "#";
+      a.className = "user-link";
+      a.innerHTML = "Full name 1";
+      const span = document.createElement("span");
+      span.className = "user-subhead";
+      span.innerHTML = "Member";
+
+      // td1
+      td.appendChild(img);
+      td.appendChild(a);
+      td.appendChild(span);
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+
+      // td2
+
+      const td2 = document.createElement("td");
+      td2.innerHTML = "2013/08/12";
+      tr.appendChild(td2);
+      tbody.appendChild(tr);
+
+      // td3
+
+      const td3 = document.createElement("td");
+      td3.className = "text-center";
+      const span2 = document.createElement("span");
+      span2.className = "label label-default p-1 px-2 bg-secondary text-white";
+      span2.innerHTML = "pending";
+      td3.appendChild(span2);
+      tr.appendChild(td3);
+      tbody.appendChild(tr);
+
+      // td4
+
+      const td4 = document.createElement("td");
+      const a2 = document.createElement("a");
+      a2.href = "#";
+      a2.innerHTML = "marlon@brando.com";
+      td4.appendChild(a2);
+      tr.appendChild(td4);
+      tbody.appendChild(tr);
+
+      // td5
+
+      const td5 = document.createElement("td");
+      td5.style.width = "20%";
+      // a3
+      const a3 = document.createElement("a");
+      a3.href = "#";
+      a3.className = "table-link text-warning";
+      const span3 = document.createElement("span");
+      span3.className = "fa-stack";
+      const i1 = document.createElement("i");
+      i1.className = "fa fa-square fa-stack-2x";
+      const i2 = document.createElement("i");
+      i2.className = "fa fa-search-plus fa-stack-1x fa-inverse";
+      span3.appendChild(i1);
+      span3.appendChild(i2);
+      a3.appendChild(span3);
+
+      // a4
+      const a4 = document.createElement("a");
+      a4.href = "#";
+      a4.className = "table-link";
+      const span4 = document.createElement("span");
+      span4.className = "fa-stack";
+      const i3 = document.createElement("i");
+      i3.className = "fa fa-square fa-stack-2x";
+      const i4 = document.createElement("i");
+      i4.className = "fa fa-pencil fa-stack-1x fa-inverse";
+      span4.appendChild(i3);
+      span4.appendChild(i4);
+      a4.appendChild(span4);
+
+      // a5
+
+      const a5 = document.createElement("a");
+      a5.href = "#";
+      a5.className = "table-link danger";
+      const span5 = document.createElement("span");
+      span5.className = "fa-stack";
+      const i5 = document.createElement("i");
+      i5.className = "fa fa-square fa-stack-2x";
+      const i6 = document.createElement("i");
+      i6.className = "fa fa-trash-o fa-stack-1x fa-inverse";
+      span5.appendChild(i5);
+      span5.appendChild(i6);
+      a5.appendChild(span5);
+
+      td5.appendChild(a3);
+      td5.appendChild(a4);
+      td5.appendChild(a5);
+      tr.appendChild(td5);
+      tbody.appendChild(tr);
+
+      // tr2
+
+      const tr2 = document.createElement("tr");
+      const td6 = document.createElement("td");
+      const img2 = document.createElement("img");
+      img2.src = "https://bootdey.com/img/Content/user_3.jpg";
+      const a6 = document.createElement("a");
+      a6.href = "#";
+      a6.className = "user-link";
+      a6.innerHTML = "Full name 1";
+      const span6 = document.createElement("span");
+      span6.className = "user-subhead";
+      span6.innerHTML = "Member";
+
+      // td6
+      td6.appendChild(img2);
+      td6.appendChild(a6);
+      td6.appendChild(span6);
+      tr2.appendChild(td6);
+      tbody.appendChild(tr2);
+
+      // td7
+
+      const td7 = document.createElement("td");
+      td7.innerHTML = "2013/08/12";
+      tr2.appendChild(td7);
+      tbody.appendChild(tr2);
+
+      // td8
+
+      const td8 = document.createElement("td");
+      td8.className = "text-center";
+      const span7 = document.createElement("span");
+      span7.className = "label label-default text-white bg-success p-1  px-3";
+      span7.innerHTML = "Active";
+      td8.appendChild(span7);
+      tr2.appendChild(td8);
+      tbody.appendChild(tr2);
+
+      // td9
+
+      const td9 = document.createElement("td");
+      const a7 = document.createElement("a");
+      a7.href = "#";
+      a7.innerHTML = "marlon@brando.com";
+      td9.appendChild(a7);
+      tr2.appendChild(td9);
+      tbody.appendChild(tr2);
+
+      // td10
+      const td30 = document.createElement("td");
+      td30.style.width = "20%";
+      const a30 = document.createElement("a");
+      a30.href = "#";
+      a30.className = "table-link text-warning";
+      const span30 = document.createElement("span");
+      span30.className = "fa-stack";
+      const i30 = document.createElement("i");
+      i30.className = "fa fa-square fa-stack-2x";
+      const i31 = document.createElement("i");
+      i31.className = "fa fa-search-plus fa-stack-1x fa-inverse";
+      span30.appendChild(i30);
+      span30.appendChild(i31);
+      a30.appendChild(span30);
+      td30.appendChild(a30);
+      tr2.appendChild(td30);
+      tbody.appendChild(tr2);
+
+      // a31
+
+      const a31 = document.createElement("a");
+      a31.href = "#";
+      a31.className = "table-link  text-info";
+      const span31 = document.createElement("span");
+      span31.className = "fa-stack";
+      const i32 = document.createElement("i");
+      i32.className = "fa fa-square fa-stack-2x";
+      const i33 = document.createElement("i");
+      i33.className = "fa fa-pencil fa-stack-1x fa-inverse";
+      span31.appendChild(i32);
+      span31.appendChild(i33);
+      a31.appendChild(span31);
+      td30.appendChild(a31);
+      tr2.appendChild(td30);
+      tbody.appendChild(tr2);
+
+      // a32
+      // span32
+      // i34
+      // i35
+      // a32
+
+      const a32 = document.createElement("a");
+      a32.href = "#";
+      a32.className = "table-link danger";
+      const span32 = document.createElement("span");
+      span32.className = "fa-stack";
+      const i34 = document.createElement("i");
+      i34.className = "fa fa-square fa-stack-2x";
+      const i35 = document.createElement("i");
+      i35.className = "fa fa-trash-o fa-stack-1x fa-inverse";
+      span32.appendChild(i34);
+      span32.appendChild(i35);
+      a32.appendChild(span32);
+      td30.appendChild(a32);
+      tr2.appendChild(td30);
+      tbody.appendChild(tr2);
+      // tr3
+
+      const tr3 = document.createElement("tr");
+      const td11 = document.createElement("td");
+      const img3 = document.createElement("img");
+      img3.src = "https://bootdey.com/img/Content/user_2.jpg";
+      const a11 = document.createElement("a");
+      a11.href = "#";
+      a11.className = "user-link";
+      a11.innerHTML = "Full name 1";
+      const span11 = document.createElement("span");
+      span11.className = "user-subhead";
+      span11.innerHTML = "Member";
+
+      // td11
+      td11.appendChild(img3);
+      td11.appendChild(a11);
+      td11.appendChild(span11);
+      tr3.appendChild(td11);
+      tbody.appendChild(tr3);
+
+      // td12
+
+      const td12 = document.createElement("td");
+      td12.innerHTML = "2013/08/12";
+      tr3.appendChild(td12);
+      tbody.appendChild(tr3);
+
+      // td13
+
+      const td13 = document.createElement("td");
+      td13.className = "text-center";
+      const span12 = document.createElement("span");
+      span12.className = "label label-defaut text-white bg-danger";
+      span12.innerHTML = "inactive";
+      td13.appendChild(span12);
+      tr3.appendChild(td13);
+      tbody.appendChild(tr3);
+
+      // td14
+
+      const td14 = document.createElement("td");
+      const a12 = document.createElement("a");
+      a12.href = "#";
+      a12.innerHTML = "marlon@brando.com";
+      td14.appendChild(a12);
+      tr3.appendChild(td14);
+      tbody.appendChild(tr3);
+
+      // td15
+
+      const td20 = document.createElement("td");
+      td20.style.width = "20%";
+      const a20 = document.createElement("a");
+      a20.href = "#";
+      a20.className = "table-link  text-warning";
+      const span20 = document.createElement("span");
+      span20.className = "fa-stack";
+      const i20 = document.createElement("i");
+      i20.className = "fa fa-square fa-stack-2x";
+      const i21 = document.createElement("i");
+      i21.className = "fa fa-search-plus fa-stack-1x fa-inverse";
+      span20.appendChild(i20);
+      span20.appendChild(i21);
+      a20.appendChild(span20);
+      td20.appendChild(a20);
+      tr3.appendChild(td20);
+      tbody.appendChild(tr3);
+
+      // a21
+      const a21 = document.createElement("a");
+      a21.href = "#";
+      a21.className = "table-link  text-info";
+      const span21 = document.createElement("span");
+      span21.className = "fa-stack";
+      const i22 = document.createElement("i");
+      i22.className = "fa fa-square fa-stack-2x";
+      const i23 = document.createElement("i");
+      i23.className = "fa fa-pencil fa-stack-1x fa-inverse";
+      span21.appendChild(i22);
+      span21.appendChild(i23);
+      a21.appendChild(span21);
+      td20.appendChild(a21);
+      tr3.appendChild(td20);
+      tbody.appendChild(tr3);
+
+      // a22
+
+      const a22 = document.createElement("a");
+      a22.href = "#";
+      a22.className = "table-link danger";
+      const span22 = document.createElement("span");
+      span22.className = "fa-stack";
+      const i24 = document.createElement("i");
+      i24.className = "fa fa-square fa-stack-2x";
+      const i25 = document.createElement("i");
+      i25.className = "fa fa-trash-o fa-stack-1x fa-inverse";
+      span22.appendChild(i24);
+      span22.appendChild(i25);
+      a22.appendChild(span22);
+      td20.appendChild(a22);
+      tr3.appendChild(td20);
+      tbody.appendChild(tr3);
+    </script>
+  </body>
+</html>
